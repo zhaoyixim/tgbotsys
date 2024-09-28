@@ -1,0 +1,12 @@
+p, role:admin, /api/user, *
+p, role:admin, /api/user/:id, *
+p, role:admin, /api/todo, *
+p, role:admin, /api/todo/:id, *
+p, role:manager, /api/todo, create
+p, role:manager, /api/todo/:id, delete
+p, role:member, /api/todo, read
+p, role:member, /api/todo/:id, update
+p, role:member, /api/user, read
+p, role:*, /api/*, *
+
+g, role:manager, role:member
