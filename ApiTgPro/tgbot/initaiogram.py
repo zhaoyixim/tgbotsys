@@ -11,7 +11,6 @@ bot_api_token = config.bot_token
 member_model = MemberModel()
 app = ApplicationBuilder().token(bot_api_token).build()
 
-
 async def send_message(chat_id: str, text: str, parse_mode=None):
     try:
         await app.bot.send_message(chat_id=chat_id, text=text, parse_mode=parse_mode)
@@ -31,7 +30,6 @@ def prepare_media(message_data):
                     media.append(InputMediaPhoto(media=photo, caption=message_data.get("message", "")))
                 else:
                     media.append(InputMediaPhoto(media=photo))
-
     # 处理视频
     video_file_id = message_data.get("video")
     if video_file_id:  # 确保 video_file_id 存在

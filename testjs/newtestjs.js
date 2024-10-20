@@ -1,16 +1,14 @@
+let params9 = "2O4XPTDX"; // 提取码
 let params1 = "PSC2"; //仓库4ZJZ6ZEQ
 let params2 = "TL";
 let params3 = "FLOOR_LOADED"; //类型
-let params4 = "false";
+let params4 = "false";//选择NO
 let params5 = "";
-let params6 = 24 ; //14号
-let params7 = 10; //hours
+let params6 = 24 ; //日期到号
+let params7 = 8; //hours
 let params8 = "" ; //minus
-let params9 = "35E7YBUW"; // 提取码
-let params10 = "825";
-
-let mouthsetting = "10";
-
+let params10 = "825";//数字
+let mouthsetting = "10";//10月份
 function getRandomDelay() {
     return Math.floor(Math.random() * (5000 - 2000 + 1)) + 1000;
 }
@@ -21,8 +19,6 @@ function simulateInput(element, values) {
 }
 let stopturnone = false;
 let stopturntwo = false;
-
-
 function doFunction() { 
     setTimeout(function() {       
         console.log("延迟1秒后执行的代码");
@@ -44,12 +40,10 @@ function doFunction() {
                 return true
             }else{
                 stopturnone = true;              
-                console.log("失败了，重新开始，请执行第二套程序")  
-                
+                console.log("失败了，重新开始，请执行第二套程序")                  
 ;                //getclearslotsubmit.click()
                 doFunctiontwo();
                 return true
-
             }
         }  
 
@@ -78,8 +72,7 @@ function doFunction() {
     let inputElementsNgScope2 = document.getElementsByClassName('ng-scope');
     if (undefined == inputElementsNgScope2[numtemp].children[6]){
          numtemp = 30;
-    } 
-        
+    }         
    let aCalDaysFixed = document.getElementsByClassName('a-bordered a-vertical-stripes a-align-center a-spacing-none');
         
     if (undefined != aCalDaysFixed [1].children[0].children[1].children[0].children[0]){
@@ -137,8 +130,7 @@ function doSubmit(){
 function executeLoop() {    
     if (stopturnone){
         return
-    }
-    
+    }    
     if (doFunction() || doSubmit()) {
          return; 
     }        
@@ -150,7 +142,7 @@ function executeLoop() {
             }, getRandomDelay()); 
     }, getRandomDelay());   
 }
-executeLoop();
+
 function doSubmitTwoStep(){
     let getnextslotsubmit = document.querySelector('[data-action="GetNextTimeslots"]');
     getnextslotsubmit.click();
@@ -161,10 +153,8 @@ function doSubmitTwoStep(){
         let getnextslotsubmitBTN = document.querySelector('[data-action="ChangeCRDDAccept"]');            
         getnextslotsubmitBTN.click();
         doFunctiontwo()  ;
-    }, 2000);        
-    
+    }, 2000); 
 }
-
 function doFunctiontwo() {  
     let inputElementsNgOKK = document.getElementsByClassName('a-text-left ng-binding');
     if (undefined != inputElementsNgOKK && inputElementsNgOKK.length>0){
@@ -180,8 +170,7 @@ function doFunctiontwo() {
             }else{
                 stopturnone = false  ;
                 console.log("失败了重新开始");              
-                executeLooptwoStep();       
-
+                executeLooptwoStep();
             }
         }  
 
@@ -199,3 +188,4 @@ function executeLooptwoStep() {
 }
 
 
+executeLoop();
