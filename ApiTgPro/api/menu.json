@@ -1,0 +1,141 @@
+[
+  {
+    "id": "/tgperson",
+    "icon": "layui-icon-table",
+    "title": "成员信息",
+    "children": [
+      {
+        "id": "/tgperson/member",
+        "icon": "layui-icon-form",
+        "title": "对话成员"
+      },
+      {
+        "id": "/tgperson/targetmember",
+        "icon": "layui-icon-form",
+        "title": "转发的目标成员"
+      }
+    ]
+  },
+  {
+    "id": "/tggroup",
+    "icon": "layui-icon-table",
+    "title": "群信息",
+    "children": [
+      {
+        "id": "/tggroup/lists",
+        "icon": "layui-icon-form",
+        "title": "授权的群"
+      },
+      {
+        "id": "/tggroup/news",
+        "icon": "layui-icon-form",
+        "title": "发送的群信息"
+      }
+    ]
+  },
+  {
+    "id": "/tgchannel",
+    "icon": "layui-icon-table",
+    "title": "频道信息",
+    "children": [
+      {
+        "id": "/tgchannel/lists",
+        "icon": "layui-icon-form",
+        "title": "频道基础信息"
+      },
+      {
+        "id": "/tgchannel/news",
+        "icon": "layui-icon-form",
+        "title": "频道消息"
+      }
+    ]
+  },
+  {
+    "id": "/form",
+    "icon": "layui-icon-table",
+    "title": "表单页面",
+    "children": [
+      {
+        "id": "/form/base",
+        "icon": "layui-icon-form",
+        "title": "基础表单"
+      },
+      {
+        "id": "/form/intricate",
+        "icon": "layui-icon-form",
+        "title": "复杂表单"
+      },
+      {
+        "id": "/form/step",
+        "icon": "layui-icon-form",
+        "title": "分步表单"
+      }
+    ]
+  },
+  {
+    "id": "/table",
+    "icon": "layui-icon-align-left",
+    "title": "列表页面",
+    "children": [
+      {
+        "id": "/table/base",
+        "icon": "layui-icon-search",
+        "title": "查询列表"
+      },
+      {
+        "id": "/table/card",
+        "icon": "layui-icon-file-b",
+        "title": "卡片列表"
+      },
+      {
+        "id": "/table/project",
+        "icon": "layui-icon-templeate-one",
+        "title": "项目列表"
+      },
+      {
+        "id": "/table/article",
+        "icon": "layui-icon-carousel",
+        "title": "文章列表"
+      }
+    ]
+  },
+  {
+    "id": "/enrollee",
+    "icon": "layui-icon-slider",
+    "title": "个人中心",
+    "children": [
+      {
+        "id": "/enrollee/profile",
+        "icon": "layui-icon-username",
+        "title": "我的资料"
+      },
+      {
+        "id": "/enrollee/message",
+        "icon": "layui-icon-email",
+        "title": "我的消息"
+      }
+    ]
+  },
+  {
+    "id": "/system",
+    "icon": "layui-icon-set",
+    "title": "系统管理",
+    "children": [
+      {
+        "id": "/system/user",
+        "icon": "layui-icon-user",
+        "title": "用户管理"
+      },
+      {
+        "id": "/system/role",
+        "icon": "layui-icon-user",
+        "title": "角色管理"
+      },
+      {
+        "id": "/system/menu",
+        "icon": "layui-icon-spread-left",
+        "title": "菜单管理"
+      }
+    ]
+  }
+]
