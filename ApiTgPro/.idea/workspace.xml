@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85c7e689-7154-482b-a047-d00d9146554c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tgbot/initaiogram.py" beforeDir="false" afterPath="$PROJECT_DIR$/tgbot/initaiogram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../layui-vue-admin" beforeDir="false" afterPath="$PROJECT_DIR$/../layui-vue-admin" afterDir="false" />
-    </list>
+    <list default="true" id="85c7e689-7154-482b-a047-d00d9146554c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,6 +96,7 @@
       <workItem from="1729341246233" duration="5212000" />
       <workItem from="1729382268911" duration="7590000" />
       <workItem from="1729410374093" duration="2907000" />
+      <workItem from="1729428302311" duration="536000" />
     </task>
     <servers />
   </component>
