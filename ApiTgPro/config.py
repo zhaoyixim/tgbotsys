@@ -11,8 +11,9 @@ bot_token = "7639219320:AAGG-XEi8bdQl17fIMDDl6AcpVPO6yEtbzs"
 system = platform.system()  # 获取操作系统名字
 if system == 'Windows':
     # 处于开发环境
-    os.environ["http_proxy"] = "http://127.0.0.1:7890"
-    os.environ["https_proxy"] = "http://127.0.0.1:7890"
+    pass
+    #os.environ["http_proxy"] = "http://127.0.0.1:7890"
+    #os.environ["https_proxy"] = "http://127.0.0.1:7890"
 elif system == 'Linux':
     # 处于生产环境
     pass

@@ -68,6 +68,14 @@ class DbHelper:
             print(f"更新失败: {e}")
             return None
 
+    def find_min_autosendtimes(self, collection_name):
+        collection = self.db[collection_name]
+        try:
+            result = collection.find().sort('autosendtimes', 1).limit(1)
+            return list(result)  # 返回列表形式的结果
+        except Exception as e:
+            print(f"查询 autosendtimes 最小的数据失败: {e}")
+            return []
     def find_unique_media_group_ids(self, collection_name,disStr="media_group_id"):
         collection = self.db[collection_name]
         try:

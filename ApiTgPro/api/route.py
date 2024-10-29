@@ -298,6 +298,59 @@ async def sendfinaly(request: Request):
 """
 数据操作
 """
+# 获取配置
+
+
+@router.get("/api/user/getprosetting")
+async def getprosetting(request: Request):
+    data = await request.json()
+    ctype = data.get("ctype")
+    member_model.set_collection_name("settings")
+    findsetting = member_model.find_member({"ctype":ctype})
+    if not findsetting:
+        insetison = {
+            "openetask": 0,
+            "tasktime": "21:30:25",
+            "taskrule": 1,
+            "ctype":ctype
+        }
+        member_model.add_member(insetison)
+        findsetting = member_model.find_member({})
+
+    returnjson = {
+        "openetask": findsetting.get("openetask"),
+        "tasktime":findsetting.get("tasktime"),
+        "taskrule": findsetting.get("taskrule"),
+                  }
+
+    response = Result(
+        code=200,
+        success=True,
+        msg="获取设置任务调度数据成功",
+        data=returnjson
+    )
+    return response
+
+@router.post("/api/user/setprosetting")
+async def setprosetting(request: Request):
+    data = await request.json()
+    ctype= data.get("ctype")
+    if not ctype:
+        return
+    # ctype: 1为群|2为频道
+    member_model.set_collection_name("settings")
+    findsetting = member_model.find_member({"ctype":ctype})
+    if findsetting is not None:
+        member_model.update_member({"_id": findsetting.get("_id")}, data)
+    else:
+        member_model.add_member(data)
+    response = Result(
+        code=200,
+        success=True,
+        msg="设置成功",
+        data={}
+    )
+    return response
 
 @router.post("/api/user/setchanelturned")
 async def setchanelturned(request: Request):

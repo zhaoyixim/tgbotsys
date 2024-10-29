@@ -11,6 +11,10 @@ class MemberModel:
         if collection_name:
             self.collection_name = collection_name
 
+    def find_min_autosendtimes(self) -> List[Dict]:
+        with DbHelper(self.db_name) as db_helper:
+            return db_helper.find_min_autosendtimes(self.collection_name)
+
     def find_first_documents_by_media_group_id(self) -> List[Dict]:
         """查找每个 media_group_id 的第一条文档。"""
         with DbHelper(self.db_name) as db_helper:

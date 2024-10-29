@@ -88,6 +88,7 @@ class InitBot:
                     "authorization_time": "",
                     "turned_groups_id":[],
                     "is_setturned":0,
+                    "autosendtimes":0,
                 }
                 if len(findchannel["turned_groups_id"]) > 0:
                     channel_info["sendtimes"]=1
